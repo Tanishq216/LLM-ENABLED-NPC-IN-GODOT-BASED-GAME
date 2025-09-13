@@ -1,0 +1,261 @@
+[gd_scene load_steps=21 format=3 uid="uid://4dloxnv1ddwx"]
+
+[ext_resource type="Texture2D" uid="uid://ccirh0w5u3bt2" path="res://Assets/Toony/Background Shades/blue.png" id="1_cylyw"]
+[ext_resource type="PackedScene" uid="uid://b4e1noe6j2lm1" path="res://Scenes/player.tscn" id="1_q257y"]
+[ext_resource type="Texture2D" uid="uid://kopoy15xqg3b" path="res://Assets/Toony/Props/cloud_01.png" id="2_8ve7v"]
+[ext_resource type="Texture2D" uid="uid://ng77yrx0x6sd" path="res://Assets/Toony/Buildings/hospital.png" id="3_8lqnn"]
+[ext_resource type="Texture2D" uid="uid://cijpsg1xudrqy" path="res://Assets/Toony/Props/ground_street_02.png" id="4_gyccn"]
+[ext_resource type="Texture2D" uid="uid://bo1xgoiswpc0i" path="res://Assets/Toony/Buildings/gas_station.png" id="4_x63a8"]
+[ext_resource type="Texture2D" uid="uid://kxqpl40lw1bq" path="res://Assets/Toony/Buildings/mini_mart.png" id="5_oxtpl"]
+[ext_resource type="Texture2D" uid="uid://c80vlvygr7sge" path="res://Assets/Toony/Buildings/bank.png" id="6_i82ff"]
+[ext_resource type="Texture2D" uid="uid://dt1rsbjov25vg" path="res://Assets/Toony/Props/sign_construction_1.png" id="7_fgphf"]
+[ext_resource type="PackedScene" uid="uid://nddhadq5ky7k" path="res://Scenes/doctor.tscn" id="10_pjc2k"]
+[ext_resource type="PackedScene" uid="uid://cr0dxs7ppe8l0" path="res://Scenes/banker.tscn" id="11_5wp8u"]
+[ext_resource type="PackedScene" uid="uid://dah7bflbdx33o" path="res://Scenes/farmer.tscn" id="12_63syk"]
+[ext_resource type="PackedScene" uid="uid://df3xydk51jjkw" path="res://Scenes/backpack_man.tscn" id="13_5xh5g"]
+[ext_resource type="PackedScene" uid="uid://da7eq1b348n7" path="res://temp/canvas_layer.tscn" id="14_i5o44"]
+[ext_resource type="Script" path="res://Scenes/CenterContainer.gd" id="15_tmkwe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntjm6"]
+texture = ExtResource("4_gyccn")
+texture_region_size = Vector2i(17, 18)
+0:0/size_in_atlas = Vector2i(8, 4)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -23, 65, -23, 65, 36.5, -64, 36)
+
+[sub_resource type="TileSet" id="TileSet_tfcao"]
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_ntjm6")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gadty"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_63ohp"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7y63t"]
+distance = -599.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Blue" type="Sprite2D" parent="."]
+position = Vector2(585, 518.5)
+scale = Vector2(8.15564, 3.94163)
+texture = ExtResource("1_cylyw")
+
+[node name="Cloud01" type="Sprite2D" parent="."]
+position = Vector2(63, 233.75)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud02" type="Sprite2D" parent="."]
+position = Vector2(1172, 222)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud03" type="Sprite2D" parent="."]
+position = Vector2(557, 317)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud04" type="Sprite2D" parent="."]
+position = Vector2(1020, 246)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud05" type="Sprite2D" parent="."]
+position = Vector2(897, 252)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud06" type="Sprite2D" parent="."]
+position = Vector2(374, 239)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud07" type="Sprite2D" parent="."]
+position = Vector2(197, 242)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Hospital" type="Sprite2D" parent="."]
+position = Vector2(63, 537)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="Hospital2" type="Sprite2D" parent="."]
+position = Vector2(310, 311)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="Hospital3" type="Sprite2D" parent="."]
+position = Vector2(997, 316)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="Hospital4" type="Sprite2D" parent="."]
+position = Vector2(840, 535)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="GasStation" type="Sprite2D" parent="."]
+position = Vector2(570, 434)
+scale = Vector2(0.333618, 0.333618)
+texture = ExtResource("4_x63a8")
+
+[node name="MiniMart" type="Sprite2D" parent="."]
+position = Vector2(83, 321)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="MiniMart2" type="Sprite2D" parent="."]
+position = Vector2(859, 314)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="MiniMart3" type="Sprite2D" parent="."]
+position = Vector2(1074, 545)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="MiniMart4" type="Sprite2D" parent="."]
+position = Vector2(200, 550)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="Bank" type="Sprite2D" parent="."]
+position = Vector2(322, 532)
+scale = Vector2(0.256977, 0.256977)
+texture = ExtResource("6_i82ff")
+
+[node name="Bank3" type="Sprite2D" parent="."]
+position = Vector2(1115, 309)
+scale = Vector2(0.254651, 0.254651)
+texture = ExtResource("6_i82ff")
+
+[node name="Bank2" type="Sprite2D" parent="."]
+position = Vector2(206, 315)
+scale = Vector2(0.22907, 0.22907)
+texture = ExtResource("6_i82ff")
+
+[node name="Bank4" type="Sprite2D" parent="."]
+position = Vector2(954, 532)
+scale = Vector2(0.22907, 0.22907)
+texture = ExtResource("6_i82ff")
+
+[node name="SignConstruction1" type="Sprite2D" parent="."]
+position = Vector2(-11, 340)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="SignConstruction2" type="Sprite2D" parent="."]
+position = Vector2(1161, 567)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="SignConstruction3" type="Sprite2D" parent="."]
+position = Vector2(1182, 341)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="SignConstruction4" type="Sprite2D" parent="."]
+position = Vector2(-13, 561)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_tfcao")
+format = 2
+layer_0/tile_data = PackedInt32Array(2490371, 3, 0, 2490379, 3, 0, 2490387, 3, 0, 2490436, 3, 0, 2490428, 3, 0, 2490420, 3, 0, 2031645, 3, 0, 2031653, 3, 0, 2031658, 3, 0, 1572867, 3, 0, 1572875, 3, 0, 1572883, 3, 0, 1572932, 3, 0, 1572924, 3, 0, 1572916, 3, 0, 2555899, 3, 0, 2555891, 3, 0, 1638395, 3, 0, 1638387, 3, 0, 1638380, 3, 0, 2555883, 3, 0, 1572940, 3, 0, 1572948, 3, 0, 1572956, 3, 0, 2490444, 3, 0, 2490452, 3, 0, 2490460, 3, 0)
+
+[node name="Doctor" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(281, 368)
+scale = Vector2(0.65, 0.65)
+
+[node name="Doctor4" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(874, 592)
+scale = Vector2(0.65, 0.65)
+
+[node name="Doctor3" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(999, 372)
+scale = Vector2(0.65, 0.65)
+
+[node name="Doctor2" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(96, 596)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(189, 366)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker2" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(980, 591)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker3" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(1092, 365)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker4" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(326, 595)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(139, 370)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer2" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(1031, 594)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer3" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(821, 373)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer4" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(236, 591)
+scale = Vector2(0.65, 0.65)
+
+[node name="backpack_man" parent="." instance=ExtResource("13_5xh5g")]
+position = Vector2(603, 483)
+scale = Vector2(0.65, 0.65)
+
+[node name="Player" parent="." instance=ExtResource("1_q257y")]
+position = Vector2(39, 346)
+scale = Vector2(0.65, 0.65)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, -47)
+zoom = Vector2(3, 3)
+
+[node name="CanvasLayer" parent="Player" instance=ExtResource("14_i5o44")]
+
+[node name="CenterContainer" type="CenterContainer" parent="Player"]
+offset_left = 68.0
+offset_top = -185.0
+offset_right = 225.0
+offset_bottom = -21.0
+script = ExtResource("15_tmkwe")
+
+[node name="LineEdit" type="LineEdit" parent="Player/CenterContainer"]
+layout_mode = 2
+expand_to_text_length = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_gadty")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1155, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-3, 0)
+shape = SubResource("WorldBoundaryShape2D_63ohp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_7y63t")

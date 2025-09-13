@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://dah7bflbdx33o"]
+
+[ext_resource type="Texture2D" uid="uid://d0xy72f80kxp" path="res://Assets/Charecter/City_men_1/Idle.png" id="1_5n8tj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv0mu"]
+atlas = ExtResource("1_5n8tj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4qlc"]
+atlas = ExtResource("1_5n8tj")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c8wq"]
+atlas = ExtResource("1_5n8tj")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evvky"]
+atlas = ExtResource("1_5n8tj")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gvya"]
+atlas = ExtResource("1_5n8tj")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l58l"]
+atlas = ExtResource("1_5n8tj")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wfb0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv0mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4qlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c8wq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evvky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gvya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l58l")
+}],
+"loop": true,
+"name": &"idle_city_man1",
+"speed": 10.0
+}]
+
+[node name="farmer" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_1wfb0")
+animation = &"idle_city_man1"
+autoplay = "idle_city_man1"
+frame_progress = 0.996207

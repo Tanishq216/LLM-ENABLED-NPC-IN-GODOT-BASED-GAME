@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://cr0dxs7ppe8l0"]
+
+[ext_resource type="Texture2D" uid="uid://b4dayy7t61eda" path="res://Assets/Charecter/Gangsters_3/Idle.png" id="1_ujnlx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5yhu"]
+atlas = ExtResource("1_ujnlx")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmlq2"]
+atlas = ExtResource("1_ujnlx")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_firiu"]
+atlas = ExtResource("1_ujnlx")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgdx4"]
+atlas = ExtResource("1_ujnlx")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82pg2"]
+atlas = ExtResource("1_ujnlx")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwl4v"]
+atlas = ExtResource("1_ujnlx")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqepf"]
+atlas = ExtResource("1_ujnlx")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdcdy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5yhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmlq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_firiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgdx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82pg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwl4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqepf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="banker" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_xdcdy")
+animation = &"idle"
+autoplay = "idle"

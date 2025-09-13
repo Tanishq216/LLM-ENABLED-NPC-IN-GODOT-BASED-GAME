@@ -1,0 +1,112 @@
+[gd_scene load_steps=16 format=3 uid="uid://nddhadq5ky7k"]
+
+[ext_resource type="Texture2D" uid="uid://cwbmywooi34rd" path="res://Assets/Charecter/Gangsters_2/Idle_2.png" id="1_qsnbu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2grsr"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpthc"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2v4i"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4115q"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlagl"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml5h7"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii46e"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypnjw"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7a7v"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhi8o"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_387r8"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiwmo"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5yx4"]
+atlas = ExtResource("1_qsnbu")
+region = Rect2(1536, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4p0v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2grsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpthc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2v4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4115q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlagl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml5h7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii46e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypnjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7a7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhi8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_387r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiwmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5yx4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Doctor" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_r4p0v")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.565243

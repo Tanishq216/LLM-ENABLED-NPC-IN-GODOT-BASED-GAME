@@ -1,0 +1,429 @@
+[gd_scene load_steps=34 format=3 uid="uid://4dloxnv1ddwx"]
+
+[ext_resource type="Texture2D" uid="uid://ccirh0w5u3bt2" path="res://Assets/Toony/Background Shades/blue.png" id="1_cylyw"]
+[ext_resource type="PackedScene" uid="uid://b4e1noe6j2lm1" path="res://Scenes/player.tscn" id="1_q257y"]
+[ext_resource type="Texture2D" uid="uid://kopoy15xqg3b" path="res://Assets/Toony/Props/cloud_01.png" id="2_8ve7v"]
+[ext_resource type="Texture2D" uid="uid://ng77yrx0x6sd" path="res://Assets/Toony/Buildings/hospital.png" id="3_8lqnn"]
+[ext_resource type="Texture2D" uid="uid://cijpsg1xudrqy" path="res://Assets/Toony/Props/ground_street_02.png" id="4_gyccn"]
+[ext_resource type="Texture2D" uid="uid://bo1xgoiswpc0i" path="res://Assets/Toony/Buildings/gas_station.png" id="4_x63a8"]
+[ext_resource type="Texture2D" uid="uid://kxqpl40lw1bq" path="res://Assets/Toony/Buildings/mini_mart.png" id="5_oxtpl"]
+[ext_resource type="Texture2D" uid="uid://c80vlvygr7sge" path="res://Assets/Toony/Buildings/bank.png" id="6_i82ff"]
+[ext_resource type="Texture2D" uid="uid://dt1rsbjov25vg" path="res://Assets/Toony/Props/sign_construction_1.png" id="7_fgphf"]
+[ext_resource type="PackedScene" uid="uid://nddhadq5ky7k" path="res://Scenes/doctor.tscn" id="10_pjc2k"]
+[ext_resource type="PackedScene" uid="uid://cr0dxs7ppe8l0" path="res://Scenes/banker.tscn" id="11_5wp8u"]
+[ext_resource type="PackedScene" uid="uid://dah7bflbdx33o" path="res://Scenes/farmer.tscn" id="12_63syk"]
+[ext_resource type="PackedScene" uid="uid://df3xydk51jjkw" path="res://Scenes/backpack_man.tscn" id="13_5xh5g"]
+[ext_resource type="Script" path="res://Scenes/CenterContainer.gd" id="15_tmkwe"]
+[ext_resource type="Script" path="res://temp/Label.gd" id="16_u0md7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lg2yp"]
+size = Vector2(122.5, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_765s3"]
+size = Vector2(129, 99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lu5qh"]
+size = Vector2(126, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sueq"]
+size = Vector2(126.5, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q052i"]
+size = Vector2(82, 98.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cffq5"]
+size = Vector2(103, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exadj"]
+size = Vector2(91, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t8u3"]
+size = Vector2(111, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qxhf"]
+size = Vector2(150, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsv23"]
+size = Vector2(152, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3j4m"]
+size = Vector2(147, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ije1d"]
+size = Vector2(143.5, 84)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntjm6"]
+texture = ExtResource("4_gyccn")
+texture_region_size = Vector2i(17, 18)
+0:0/size_in_atlas = Vector2i(8, 4)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -23, 65, -23, 65, 36.5, -64, 36)
+
+[sub_resource type="TileSet" id="TileSet_tfcao"]
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_ntjm6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tn1j"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gadty"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_63ohp"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7y63t"]
+distance = -599.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Blue" type="Sprite2D" parent="."]
+position = Vector2(585, 518.5)
+scale = Vector2(8.15564, 3.94163)
+texture = ExtResource("1_cylyw")
+
+[node name="Cloud01" type="Sprite2D" parent="."]
+position = Vector2(63, 233.75)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud02" type="Sprite2D" parent="."]
+position = Vector2(1172, 222)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud03" type="Sprite2D" parent="."]
+position = Vector2(557, 317)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud04" type="Sprite2D" parent="."]
+position = Vector2(1020, 246)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud05" type="Sprite2D" parent="."]
+position = Vector2(897, 252)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud06" type="Sprite2D" parent="."]
+position = Vector2(374, 239)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Cloud07" type="Sprite2D" parent="."]
+position = Vector2(197, 242)
+scale = Vector2(0.107843, 0.139493)
+texture = ExtResource("2_8ve7v")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Hospital" type="Sprite2D" parent="Area2D"]
+position = Vector2(63, 537)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(313.75, 315)
+shape = SubResource("RectangleShape2D_lg2yp")
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="Hospital2" type="Sprite2D" parent="Area2D3"]
+position = Vector2(310, 311)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(998.5, 317.5)
+shape = SubResource("RectangleShape2D_765s3")
+
+[node name="Area2D4" type="Area2D" parent="."]
+
+[node name="Hospital3" type="Sprite2D" parent="Area2D4"]
+position = Vector2(997, 316)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(62, 538)
+shape = SubResource("RectangleShape2D_lu5qh")
+
+[node name="Area2D5" type="Area2D" parent="."]
+
+[node name="Hospital4" type="Sprite2D" parent="Area2D5"]
+position = Vector2(840, 535)
+scale = Vector2(0.215587, 0.215587)
+texture = ExtResource("3_8lqnn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2(842.75, 539)
+shape = SubResource("RectangleShape2D_3sueq")
+
+[node name="Area2D6" type="Area2D" parent="."]
+
+[node name="GasStation" type="Sprite2D" parent="Area2D6"]
+position = Vector2(570, 434)
+scale = Vector2(0.333618, 0.333618)
+texture = ExtResource("4_x63a8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2(206, 307.75)
+shape = SubResource("RectangleShape2D_q052i")
+
+[node name="Area2D7" type="Area2D" parent="."]
+
+[node name="MiniMart" type="Sprite2D" parent="Area2D7"]
+position = Vector2(83, 321)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+position = Vector2(1116.5, 309.5)
+shape = SubResource("RectangleShape2D_cffq5")
+
+[node name="Area2D8" type="Area2D" parent="."]
+
+[node name="MiniMart2" type="Sprite2D" parent="Area2D8"]
+position = Vector2(859, 314)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+position = Vector2(955.5, 535)
+shape = SubResource("RectangleShape2D_exadj")
+
+[node name="Area2D9" type="Area2D" parent="."]
+
+[node name="MiniMart3" type="Sprite2D" parent="Area2D9"]
+position = Vector2(1074, 545)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9"]
+position = Vector2(323.5, 529.5)
+shape = SubResource("RectangleShape2D_1t8u3")
+
+[node name="Area2D10" type="Area2D" parent="."]
+
+[node name="MiniMart4" type="Sprite2D" parent="Area2D10"]
+position = Vector2(200, 550)
+scale = Vector2(0.303226, 0.303226)
+texture = ExtResource("5_oxtpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10"]
+position = Vector2(81, 316.5)
+shape = SubResource("RectangleShape2D_3qxhf")
+
+[node name="Area2D11" type="Area2D" parent="."]
+
+[node name="Bank" type="Sprite2D" parent="Area2D11"]
+position = Vector2(322, 532)
+scale = Vector2(0.256977, 0.256977)
+texture = ExtResource("6_i82ff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D11"]
+position = Vector2(857, 313.5)
+shape = SubResource("RectangleShape2D_tsv23")
+
+[node name="Area2D12" type="Area2D" parent="."]
+
+[node name="Bank3" type="Sprite2D" parent="Area2D12"]
+position = Vector2(1115, 309)
+scale = Vector2(0.254651, 0.254651)
+texture = ExtResource("6_i82ff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D12"]
+position = Vector2(1075, 549)
+shape = SubResource("RectangleShape2D_x3j4m")
+
+[node name="Area2D13" type="Area2D" parent="."]
+
+[node name="Bank2" type="Sprite2D" parent="Area2D13"]
+position = Vector2(206, 315)
+scale = Vector2(0.22907, 0.22907)
+texture = ExtResource("6_i82ff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D13"]
+position = Vector2(199.25, 549)
+shape = SubResource("RectangleShape2D_ije1d")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="Bank4" type="Sprite2D" parent="Area2D2"]
+position = Vector2(954, 532)
+scale = Vector2(0.22907, 0.22907)
+texture = ExtResource("6_i82ff")
+
+[node name="SignConstruction1" type="Sprite2D" parent="."]
+position = Vector2(-11, 340)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="SignConstruction2" type="Sprite2D" parent="."]
+position = Vector2(1161, 567)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="SignConstruction3" type="Sprite2D" parent="."]
+position = Vector2(1182, 341)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="SignConstruction4" type="Sprite2D" parent="."]
+position = Vector2(-13, 561)
+scale = Vector2(0.418033, 0.418033)
+texture = ExtResource("7_fgphf")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_tfcao")
+format = 2
+layer_0/tile_data = PackedInt32Array(2490371, 3, 0, 2490379, 3, 0, 2490387, 3, 0, 2490436, 3, 0, 2490428, 3, 0, 2490420, 3, 0, 2031645, 3, 0, 2031653, 3, 0, 2031658, 3, 0, 1572867, 3, 0, 1572875, 3, 0, 1572883, 3, 0, 1572932, 3, 0, 1572924, 3, 0, 1572916, 3, 0, 2555899, 3, 0, 2555891, 3, 0, 1638395, 3, 0, 1638387, 3, 0, 1638380, 3, 0, 2555883, 3, 0, 1572940, 3, 0, 1572948, 3, 0, 1572956, 3, 0, 2490444, 3, 0, 2490452, 3, 0, 2490460, 3, 0)
+
+[node name="Doctor" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(281, 368)
+scale = Vector2(0.65, 0.65)
+
+[node name="Doctor4" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(874, 592)
+scale = Vector2(0.65, 0.65)
+
+[node name="Doctor3" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(999, 372)
+scale = Vector2(0.65, 0.65)
+
+[node name="Doctor2" parent="." instance=ExtResource("10_pjc2k")]
+position = Vector2(96, 596)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(189, 366)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker2" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(980, 591)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker3" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(1092, 365)
+scale = Vector2(0.65, 0.65)
+
+[node name="banker4" parent="." instance=ExtResource("11_5wp8u")]
+position = Vector2(326, 595)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(139, 370)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer2" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(1031, 594)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer3" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(821, 373)
+scale = Vector2(0.65, 0.65)
+
+[node name="farmer4" parent="." instance=ExtResource("12_63syk")]
+position = Vector2(236, 591)
+scale = Vector2(0.65, 0.65)
+
+[node name="backpack_man" parent="." instance=ExtResource("13_5xh5g")]
+position = Vector2(603, 483)
+scale = Vector2(0.65, 0.65)
+
+[node name="Player" parent="." instance=ExtResource("1_q257y")]
+position = Vector2(545, 485)
+scale = Vector2(0.65, 0.65)
+
+[node name="CenterContainer" type="CenterContainer" parent="Player"]
+offset_left = -229.231
+offset_top = -169.231
+offset_right = 691.769
+offset_bottom = -12.2308
+script = ExtResource("15_tmkwe")
+
+[node name="LineEdit" type="LineEdit" parent="Player/CenterContainer"]
+layout_mode = 2
+expand_to_text_length = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, -47)
+zoom = Vector2(3, 3)
+
+[node name="MarginContainer" type="MarginContainer" parent="Player"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -475.0
+offset_top = 32.0
+offset_right = 446.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="Player/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7tn1j")
+
+[node name="MarginContainer" type="MarginContainer" parent="Player/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="Player/MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player/MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 1
+script = ExtResource("16_u0md7")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Player/MarginContainer/MarginContainer/HBoxContainer/Label"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_gadty")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1155, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-3, 0)
+shape = SubResource("WorldBoundaryShape2D_63ohp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_7y63t")
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="Player" method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="Player" method="_on_area_2d_4_body_entered"]
+[connection signal="body_entered" from="Area2D5" to="Player" method="_on_area_2d_5_body_entered"]
+[connection signal="body_entered" from="Area2D6" to="Player" method="_on_area_2d_6_body_entered"]
+[connection signal="body_entered" from="Area2D7" to="Player" method="_on_area_2d_7_body_entered"]
+[connection signal="body_entered" from="Area2D8" to="Player" method="_on_area_2d_8_body_entered"]
+[connection signal="body_entered" from="Area2D9" to="Player" method="_on_area_2d_9_body_entered"]
+[connection signal="body_entered" from="Area2D10" to="Player" method="_on_area_2d_10_body_entered"]
+[connection signal="body_entered" from="Area2D11" to="Player" method="_on_area_2d_11_body_entered"]
+[connection signal="body_entered" from="Area2D12" to="Player" method="_on_area_2d_12_body_entered"]
+[connection signal="body_entered" from="Area2D13" to="Player" method="_on_area_2d_13_body_entered"]
