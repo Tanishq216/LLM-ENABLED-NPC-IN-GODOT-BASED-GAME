@@ -1,4 +1,4 @@
-# LLM-Enabled NPC in Godot Game Engine
+# LLM-Enabled NPC in Godot Video Game Engine
 
 ## Overview
 This project integrates an LLM-powered NPC(Non Playable Character) system into a Godot-based game. It includes:
