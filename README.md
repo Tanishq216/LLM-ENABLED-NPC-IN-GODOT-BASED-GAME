@@ -1,7 +1,7 @@
 # LLM-Enabled NPC in Godot Game Engine
 
 ## Overview
-This project integrates an LLM-powered NPC system into a Godot-based game. It includes:
+This project integrates an LLM-powered NPC(Non Playable Character) system into a Godot-based game. It includes:
 - A pre-built exported game under `Exported Game/`
 - A Colab-friendly notebook under `Python API Script/google_notebook_capstone.ipynb` that serves a Flask API backed by an LLM
 - Guidance for secure key management
