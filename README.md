@@ -1,4 +1,4 @@
-# LLM-Enabled NPC in Godot Video Game Engine developed Video Game
+# LLM(Large Language Model)-Enabled NPC in Godot Video Game Engine developed Video Game
 
 ## Overview
 This project integrates an LLM-powered NPC(Non Playable Character) system into a Godot-based game. It includes:
